@@ -43,4 +43,31 @@ test('Handle Dropdown', async ({ page }) => {
 })
 
 
+test('Handle Checkbox', async ({ page }) => {
 
+    await page.goto("https://web-locators-static-site-qa.vercel.app/");
+
+    await page.getByText("Checkbox").click();
+
+    const checkbox1 = page.locator("//div[@class='Checkbox_section1']/div")
+        .filter({ hasText: 'BDT' })
+        .getByRole('checkbox')
+        .click();
+
+    await page.pause();
+
+})
+
+test('HandleCheckbox1', async ({ page }) => {
+
+    await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+
+    // const checkbox2 = page.locator("#checkbox-example")
+    //     .filter({ hasText: 'Option2' })
+    //     .getByRole('checkbox');
+
+    const checkbox2 = page.locator("#checkBoxOption2");
+
+    await checkbox2.click();
+
+})
