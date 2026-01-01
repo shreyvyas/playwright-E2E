@@ -13,3 +13,23 @@ test('Handle Radio Button', async ({ page }) => {
     await page.pause();
 
 })
+
+
+test('Handle Checkbox', async({page}) => {
+
+    await page.goto("https://letcode.in/radio");
+
+    const checkbox1 = page.getByLabel(" Remember me ")
+
+    const isCheckEnabled = await checkbox1.isEnabled();
+    console.log(isCheckEnabled);
+
+})
+
+
+test('Handle Checkbox3', async({page})=> {
+
+    await page.goto("https://web-locators-static-site-qa.vercel.app/Checkbox");
+
+    await page.getByRole('checkbox', {name:'QA'}).click();
+})
