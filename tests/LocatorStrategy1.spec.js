@@ -47,3 +47,54 @@ test('Handle Checkbox3', async({page})=> {
    console.log(isCheckNowChecked);
 
 })
+
+
+test('Handle Radio Button1', async({page}) => {
+
+    await page.goto("https://web-locators-static-site-qa.vercel.app/Radio");
+
+    // const radioButton = page.locator(".RadioScreen_Container2 div")
+    //                     .filter({hasText: 'Very Good'})
+    //                     .getByRole('radio');
+
+        const radioButton = page.locator(".RadioScreen_Container2 div")
+                        .filter({hasText: 'Very Good'})
+                        .locator('input[type="radio"]');
+
+    const isRadioChecked = await radioButton.isChecked();
+    console.log(isRadioChecked);
+
+    await radioButton.check();
+
+    const isRadioNowChecked = await radioButton.isChecked();
+    console.log(isRadioNowChecked);
+
+    //await page.pause();
+
+})
+
+
+test('Handle Radio Button2', async({page}) => {
+
+    await page.goto("https://web-locators-static-site-qa.vercel.app/Radio");
+
+
+//     const radioButton = page.locator("//input[@value='veryGood']");
+//   //  await radioButton.click();
+//     await radioButton.dispatchEvent('click');
+
+//    await expect(radioButton).toBeChecked();
+
+//     radioButton.is
+
+//     const isRadioChecked = await radioButton.isChecked();
+//     console.log(isRadioChecked);
+
+    const radio = page.locator('label.MuiFormControlLabel-root', { hasText: 'Very Good' })
+                 .locator('[role="radio"]');
+
+    await radio.click();
+    await expect(radio).toHaveAttribute('aria-checked', 'true');
+
+    
+})
