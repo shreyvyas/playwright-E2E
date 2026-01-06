@@ -47,3 +47,6 @@ getData2(2, (result)=>{
 
 });
 
+//it will become callback hell if we want to send data continue
+
+//here comes advanced version of callback which is Promise.sss
