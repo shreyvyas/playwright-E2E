@@ -18,7 +18,7 @@ function getData(dataID){
     })
 
 }
-
+getData();
 getData(1).then((msg)=>console.log(msg)).catch((msg)=>{console.log(msg)});
 
 getData().then((msg)=>console.log(msg)).catch((msg)=>{console.log(msg)});
