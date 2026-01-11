@@ -21,3 +21,9 @@ console.log(reduce1);
 //curr - current value picked from array
 //acc starts value will be 0 and 1 will be picked from array so it will be 0+1, now result is 1
 //now acc=1 and next curr value from array is 2 then 2+1=3
+
+//print numbers>10
+const numbers = [5, 12, 18, 3, 25];
+
+const filter2 = numbers.filter(n => n>10);
+console.log(filter2);
