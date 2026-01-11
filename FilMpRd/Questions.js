@@ -65,3 +65,25 @@ const char = ["a","b","c"];
 const rd1 = char.reduce((acc,curr)=> acc+curr);
 console.log(rd1);
 
+
+//From people, get names of users age > 18
+
+const names = users.filter(a => a.age>18)
+              .map(n => n.name);
+
+console.log(names);
+
+
+//From nums, get double of only even numbers
+const evenDouble = nums.filter(n => n%2==0).map(n=> n*2);
+console.log(evenDouble);
+
+
+//Total salary of employees whose salary > 1000
+const totalSalary = employees.filter(sal => sal.salary>1000)
+                    .reduce((acc,curr) => acc+curr.salary, 0);
+
+console.log(totalSalary);
+
+
+//
