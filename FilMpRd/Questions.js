@@ -45,3 +45,23 @@ const employees = [
 
 const sal = employees.filter(e => e.salary >= 1000 && e.salary <= 2000);
 console.log(sal);
+
+
+//From users array, create object count by age group: {adult:?, kid:?}
+const result = users.reduce((acc, user) => {
+  if (user.age >= 18) {
+    acc.adult++;
+  } else {
+    acc.kid++;
+  }
+  return acc;
+}, { adult: 0, kid: 0 });
+
+console.log(result);
+
+
+//Convert ["a","b","c"] to "abc"
+const char = ["a","b","c"];
+const rd1 = char.reduce((acc,curr)=> acc+curr);
+console.log(rd1);
+
