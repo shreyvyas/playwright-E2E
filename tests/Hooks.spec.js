@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-//beforeEach, afterEach, before All and afterAll
+//hooks: beforeEach, afterEach, before All and afterAll
 
 //beforeAll
 test.beforeAll(() => {
