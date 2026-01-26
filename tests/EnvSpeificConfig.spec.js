@@ -1,5 +1,4 @@
 import {test} from '@playwright/test';
-import { config } from '../utils/Config.js';
 
 test('Read Env', async()=> {
 

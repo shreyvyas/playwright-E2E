@@ -5,4 +5,4 @@ export const config = {
     username: process.env.APP_USERNAME,
     password: process.env.APP_PASSWORD
 
-};
+}
